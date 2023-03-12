@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="bgcolor">
+
+
+    <section class="layout">
+        <header class="header">
+            <div class="box header"> </div>
+
+        </header>
+
+        <main class="main">
+            <div class="box main">
+                <div class="inputcard">
+                    <form class="userinput">
+                        <h1 class="ttext">Login:</h1>
+                        <h2 class="inputbox">
+                            <div class="field">
+                                <label for="name"> Insira o nome:</label>
+                                <input id="name" class="loginbox" type="text" placeholder="Digite o nome">
+                            </div>
+
+                            <div class="field">
+                                <label for="password">Insira a senha:</label>
+                                <input id="password" class="passwordbox" type="password" placeholder="Digite a senha">
+                            </div>
+                        </h2>
+
+                        <button id="button" type="submit" class="buttonbox">
+                            Envie
+
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="box footer"> </div>
+        </footer>
+
+    </section>
+
+    <script>
+        const user = {
+            name: "",
+            password: "",
+        }
+        const nameElement = document.getElementById("name")
+        nameElement.addEventListener("change", (event) => {
+            user.name = event.target.value
+            console.log(`name: ${user.name}`)
+
+        })
+
+        const passwordElement = document.getElementById('password')
+        passwordElement.addEventListener("change", (event) => {
+            user.password = event.target.value
+            console.log(`password: ${user.password}`)
+        })
+
+        const submitElement = document.getElementById("button")
+        submitElement.addEventListener("click", (event) => {
+            event.preventDefault()
+            console.log(user)
+
+        })
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- 
+    - Aplicar um fundo colorido OK
+    - Criar um card branco OK
+    - Centralizar o card branco OK
+    - Adicionar um padding no card OK
+    - Botar um títuto centralizado no card OK
+    - Botar dois inputs de email senha OK
+    - Os inputs tem que ocupar 100% do card OK
+    - Os inputs tem que ter padding OK
+    - Os inputs tem que ter labels OK
+    - Colocar um botão submit OK
+    - O botão tem que ocupar 100% do card OK
+    - O botão tem que ser colorido OK
+    - O botão deve mudar de cor ao hover OK
+    - O botão deve mudar de cor ao clicar OK
+
+    
+ -->
